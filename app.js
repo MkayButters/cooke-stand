@@ -11,7 +11,7 @@ function customersPerHrRandom(min,max) {
 
 var seattle = {
 
-    store1: 'seattle',
+    store: 'Seattle',
     minCustomers: 23,
     maxCustomers: 65,
     avgcookies: 6.3,
@@ -20,7 +20,7 @@ var seattle = {
     render: function () {
         for (var i = 0; i <= this.times.length; i++) {
             var liEl = document.createElement('li')
-            liEl.textContent = this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
+            liEl.textContent = this.store + "- " + this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
             storeinfo.appendChild(liEl)
             
         }
@@ -31,7 +31,7 @@ console.log(customersPerHrRandom)
 
 var tokyo = {
 
-    store: 'tokyo',
+    store: 'Tokyo',
     minCustomers: 3,
     maxCustomers: 24,
     avgcookies: 1.2,
@@ -40,7 +40,7 @@ var tokyo = {
     render: function () {
         for (var i = 0; i <= this.times.length; i++) {
             var liEl = document.createElement('li')
-            liEl.textContent = this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
+            liEl.textContent = this.store + "- " + this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
             storeinfo.appendChild(liEl)
             
         }
@@ -51,7 +51,7 @@ console.log(customersPerHrRandom)
 
 var dubai = {
 
-    store: 'dubai',
+    store: 'Dubai',
     minCustomers: 11,
     maxCustomers: 38,
     avgcookies: 3.7,
@@ -60,7 +60,7 @@ var dubai = {
     render: function () {
         for (var i = 0; i <= this.times.length; i++) {
             var liEl = document.createElement('li')
-            liEl.textContent = this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
+            liEl.textContent = this.store + "- " + this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
             storeinfo.appendChild(liEl)
             
         }
@@ -71,7 +71,7 @@ console.log(customersPerHrRandom)
 
 var paris = {
 
-    store: 'paris',
+    store: 'Paris',
     minCustomers: 20,
     maxCustomers: 38,
     avgcookies: 2.3,
@@ -80,7 +80,7 @@ var paris = {
     render: function () {
         for (var i = 0; i <= this.times.length; i++) {
             var liEl = document.createElement('li')
-            liEl.textContent = this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
+            liEl.textContent = this.store + "- "  + this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
             storeinfo.appendChild(liEl)
             
         }
@@ -91,7 +91,7 @@ console.log(customersPerHrRandom)
 
 var lima = {
 
-    store: 'lima',
+    store: 'Lima',
     minCustomers: 2,
     maxCustomers: 16,
     avgcookies: 4.6,
@@ -100,7 +100,7 @@ var lima = {
     render: function () {
         for (var i = 0; i <= this.times.length; i++) {
             var liEl = document.createElement('li')
-            liEl.textContent = this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
+            liEl.textContent = this.store + "- " + this.times[i] + Math.round(customersPerHrRandom(this.minCustomers , this.maxCustomers)*this.avgcookies);
             storeinfo.appendChild(liEl)
             
         }
