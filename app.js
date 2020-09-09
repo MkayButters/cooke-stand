@@ -14,8 +14,8 @@ function Store(name, min, max, avg) {
     this.maxCustomers = max;
     this.avgCookies = avg;
     this.times = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: '];
-    this.cookieSalePerHr = []
-    this.totalCookiesADay = 0
+    this.cookieSalePerHr = [];
+    this.totalCookiesADay = 0;
 }
 
 Store.prototype.render = function () {
