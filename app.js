@@ -1,14 +1,44 @@
 'use strict'
+var myTable = document.getElementById('myTable');
+var storeInfo = document.getElementById('storeInfo');
 
-var storeinfo = document.getElementById('storeinfo')
+// function createTableHeader() {
+//     var trElement = document.createElement('tr');
+//     myTable.appendChild(trElement);
+
+//     var thElement = document.createElement('th')
+//     thElement.textContent = "Store Location"
+//     trElement.appendChild(thElement);
+
+//     for (var i = 0; i < this.times.length; i++) {
+//         var thElement = document.createElement('th')
+//         thElement.textContent = hours[i]
+//         trElement.appendChild(thElement);
+//     }
+//     thElement = document.createElement('th');
+//     thElement.textContent = 'Total'
+//     trElement.appendChild(trElement);
+    
+// }
+// createTableHeader();
+
+// funciton createTableRow() {
+// var TrElement = document.createElement('tr');
+// myTable.appendChild(trElement);
+
+// var thElement = document.createElement('th');
+// trElement.appendChild(thElement);
+// thElement.textContent = 'Totals' ; 
+// }
+
 function customersPerHrRandom(min, max) {
-
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-function Store(name, min, max, avg) {
 
+function Store(name, min, max, avg) {
+    
     this.storeName = name;
     this.minCustomers = min;
     this.maxCustomers = max;
@@ -30,16 +60,17 @@ Store.prototype.render = function () {
     liEl.textContent = "Daily Total: " + this.totalCookiesADay;
     storeinfo.appendChild(liEl)
 }
-var seattle = new Store('Seattle' , 23 , 65 , 6.3)
-var tokyo = new Store('Tokyo' , 3 , 24 , 1.2)
-var dubai = new Store('Dubai' , 11 , 38 , 3.7)
-var paris = new Store('Paris' , 20 , 38 , 2.3)
-var lima = new Store('Lima' , 2 , 16 , 4.6)
+var seattle = new Store('Seattle', 23, 65, 6.3)
+var tokyo = new Store('Tokyo', 3, 24, 1.2)
+var dubai = new Store('Dubai', 11, 38, 3.7)
+var paris = new Store('Paris', 20, 38, 2.3)
+var lima = new Store('Lima', 2, 16, 4.6)
 
 seattle.render()
 tokyo.render()
 dubai.render()
 paris.render()
 lima.render()
+// createTableRow();
 
-console.log(customersPerHrRandom)
+
