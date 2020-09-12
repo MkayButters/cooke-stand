@@ -46,6 +46,8 @@ var dubai = new Store('Dubai', 11, 38, 3.7)
 var paris = new Store('Paris', 20, 38, 2.3)
 var lima = new Store('Lima', 2, 16, 4.6)
 
+
+
 function createTableHeader() {
     var trElement = document.createElement('tr');
     myTable.appendChild(trElement);
@@ -78,7 +80,6 @@ function createTableFooter() {
         loop2: for (var j = 0; j < stores.length; j++) {
             
             hourlySum += stores[j].cookieSalePerHr[i];
-            console.log(hourlySum);
             grandTotal += stores[j].cookieSalePerHr[i];
         }
         var thElement = document.createElement('th');
@@ -92,10 +93,36 @@ function createTableFooter() {
     myTable.appendChild(trElement);
 }
 
-seattle.render()
-tokyo.render()
-dubai.render()
-paris.render()
-lima.render()
+seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
 stores = [seattle, tokyo, dubai, paris, lima]
-createTableFooter();
+
+var newLocation = document.getElementById('newLocation');   //step 1 make a variable.
+newLocation.addEventListener('submit', handleSubmit);   // step 2 add an event listener.
+function handleSubmit(event) {  //step 3 add event handler
+    event.preventDefault();
+
+    var name = event.target.newLocation.value;
+    var min = parseInt(event.target.min.value);
+    var max = parseInt(event.target.max.value);
+    var avg = parseInt(event.target.avg.value);
+
+    var newStoreLocation = new Store(name, min, max, avg);      //step 4 call constructor
+    console.log(name);
+    stores.push(newStoreLocation);
+    buildTable();
+  }
+
+function buildTable() {
+    myTable.innerHTML = null;
+    createTableHeader();
+    for (var i = 0; i < stores.length; i++) {
+        stores[i].render();
+    }
+    createTableFooter();
+}  
+
+buildTable();

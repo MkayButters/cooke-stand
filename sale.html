@@ -6,10 +6,31 @@
 
 <body>
     <h1>Cookie Stand Sales</h1>
-    <table id='myTable'>
-        
+    <table id='myTable'>      
     </table>
     <div id="storeInfo"></div>
+    <div id="addingNew">
+        <h2>Add a new store</h2>
+        <form id="newLocation">
+            <fieldset>
+                <legend>Store Location information</legend>
+                <label>Store Name</label>
+                <input name = "newLocation" type="text">
+                <label>Minimum Customers Each Hour</label>
+                <input name = "min" type = "text">
+                <label>Maximum Customers Each Hour</label>
+                <input name = "max" type = "text">
+                <label>Average Cookies Each Sale</label>
+                <input name = "avg" type = "text">
+            </fieldset>
+            <button type="submit">Add new store!</button>
+        </form>
+
+
+
+
+    </div>
+
     <footer>
         <script src="app.js"></script>
         <a href="index.html">Back to Home</a>
